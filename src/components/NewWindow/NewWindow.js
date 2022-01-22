@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import { copyStyles } from "./copy-styles";
 import { createPortal } from "react-dom";
+import PropTypes from 'prop-types';
+
 
 const NewWindow = props => {
     const [container, setContainer] = useState(null)
@@ -21,7 +23,7 @@ const NewWindow = props => {
             newWindow.current = window.open("", "", `width=${props.width},height=${props.height},left=${props.left},right=${props.right},top=${props.top},bottom=${props.bottom}`)
             newWindow.current.document.body.appendChild(container)
             newWindow.current.addEventListener("beforeunload", () => {
-                props.closeWindowPortal();
+                props.onClose();
             });
 
             const curWindow = newWindow.current
@@ -33,6 +35,17 @@ const NewWindow = props => {
     return container && createPortal(<><title>{props.title}</title>{props.children}</>, container)
 };
 
+NewWindow.propTypes = {
+    onClose: PropTypes.func,
+    top: PropTypes.number,
+    left: PropTypes.number,
+    right: PropTypes.number,
+    bottom: PropTypes.number,
+    width: PropTypes.number,
+    height: PropTypes.number,
+    title: PropTypes.string
+}
+
 NewWindow.defaultProps = {
     top: 0,
     left: 0,
@@ -40,7 +53,8 @@ NewWindow.defaultProps = {
     bottom: 0,
     width: 1920,
     height: 1080,
-    title: 'New window'
+    title: 'New window',
+    onClose: function () {}
 }
 
 export default NewWindow
