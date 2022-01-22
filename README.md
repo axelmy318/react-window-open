@@ -39,14 +39,11 @@ export default Example
 
 | Properties | type | default | description |
 |--|--|--|--|
-| value | string/array(int) | "0000000" | A string or an array of 7 integers representing the active days of the week. 0 being inactive, 1 being active. |
-| showChars | int | null | The numbers of chars to show for the days names. Ex: Monday=Mo. null will display the entire word |
-| onChange | function | | The function that will be called when the user clicks on a day |
-| days | array | ['monday','tuesday','wednesday'... | The array defining the name of the days |
-| activeDayStyle | string |  | The CSS styling to apply to active days |
-| inactiveDayStyle | string |  | The CSS styling to apply to inactive days |
-| inputStyle | object |  | The CSS styling of the whole input |
-| dayStyle | object |  | The CSS styling used for each days |
-| forcedState | object |  | Force certain days to be active or inactive. See examples above |
-| textCase | string | null | Defines the case of the text. Available: firstToUpper (Monday), toUpper (MONDAY), toLower (monday) |
-
+| top | int | 0 | The bottom offset of the window |
+| bottom | int | 0 | The top offset of the window |
+| left | int | 0 | The left offset of the window |
+| right | int | 0 | The right offset of the window |
+| width | int | 0 | The width of the window |
+| height | int | 0 | The height of the window |
+| title | string | 0 | The title of the new window |
+| onClose | func |  | A callback function called whenever the window is closed |
