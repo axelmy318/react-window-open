@@ -1,7 +1,7 @@
 {
   "name": "@axelmy/react-window-open",
-  "version": "0.0.1",
-  "description": "A highly customizable and easy to use react input that allows users to select days of the week with a user friendly interface",
+  "version": "0.0.3",
+  "description": "A customizable component that opens a new window using the window.open API",
   "scripts": {
     "rollup": "rollup -c",
     "storybook": "start-storybook -p 6006",
@@ -57,8 +57,9 @@
     "javascript",
     "react",
     "reactjs",
-    "input",
-    "time",
-    "date"
+    "new-window",
+    "browser",
+    "window",
+    "open"
   ]
 }
