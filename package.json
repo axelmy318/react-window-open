@@ -1,6 +1,6 @@
 {
-  "name": "@axelmy318/react-window-open",
-  "version": "1.0.2",
+  "name": "react-window-open",
+  "version": "1.0.3",
   "description": "A customizable component that opens a new window using the window.open API",
   "scripts": {
     "rollup": "rollup -c",
@@ -43,7 +43,7 @@
     "dist"
   ],
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "registry": "https://registry.npmjs.org/"
   },
   "repository": {
     "type": "git",

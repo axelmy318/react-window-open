@@ -3,7 +3,7 @@
 A customizable component that opens a new window using the window.open API
 
 ## Installation
-`npm i @axelmy/react-window-open`
+`npm i react-window-open`
 
 ## Usage
 
@@ -19,7 +19,7 @@ const Example = () => {
         <>
             <button onClick={() => setIsOpen(!isOpen)}>{!isOpen ? 'Open' : 'Close'}</button>
 
-            {isOpen && <NewWindow>
+            {isOpen && <NewWindow onClose={() => setIsOpen(false)}>
                 <p>This text is displayed in a new window. 👀</p>
                 <p>And all the states are shared ! 👌</p>
                 <p>Counter in the new window : {counter}</p>
