@@ -1,4 +1,4 @@
-# Days of the week input
+# react-window-open
 ## Description
 A customizable component that opens a new window using the window.open API
 
