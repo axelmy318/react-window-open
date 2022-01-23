@@ -5,7 +5,7 @@ A customizable component that opens a new window using the window.open API
 `npm i react-window-open`
 
 ## Demo 👀
-[https://axelmy-projects-showcase.firebaseapp.com/react-weekdays-input](https://axelmy-projects-showcase.firebaseapp.com/react-weekdays-input)
+[https://axelmy-projects-showcase.firebaseapp.com/react-window-open](https://axelmy-projects-showcase.firebaseapp.com/react-window-open)
 
 ## Usage 💻
 
