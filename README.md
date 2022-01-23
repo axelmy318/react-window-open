@@ -1,15 +1,17 @@
-# react-window-open
-## Description
+# react-window-open 👋
 A customizable component that opens a new window using the window.open API
 
 ## Installation
 `npm i react-window-open`
 
-## Usage
+## Demo 👀
+[https://axelmy-projects-showcase.firebaseapp.com/react-weekdays-input](https://axelmy-projects-showcase.firebaseapp.com/react-weekdays-input)
+
+## Usage 💻
 
 ```javascript
 import React, { useState } from 'react'
-import { NewWindow } from '@axelmy/react-window-open'
+import { NewWindow } from 'react-window-open'
 
 const Example = () => {
     const [isOpen, setIsOpen] = useState(false)
@@ -35,7 +37,7 @@ const Example = () => {
 export default Example
 ```
 
-## API
+## API ✔
 
 | Properties | type | default | description |
 |--|--|--|--|
