@@ -1,6 +1,6 @@
 {
   "name": "react-window-open",
-  "version": "1.0.5",
+  "version": "1.1.0",
   "description": "A customizable component that opens a new window using the window.open API",
   "scripts": {
     "rollup": "rollup -c",
