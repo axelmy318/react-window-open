@@ -22,9 +22,14 @@ const NewWindow = props => {
         if(container && newWindow.current) {
             newWindow.current = window.open("", "", `width=${props.width},height=${props.height},left=${props.left},right=${props.right},top=${props.top},bottom=${props.bottom}`)
             newWindow.current.document.body.appendChild(container)
+            
             newWindow.current.addEventListener("beforeunload", () => {
                 props.onClose();
             });
+            newWindow.current.addEventListener("resize", () => {
+                props.onResize(newWindow.current.innerWidth, newWindow.current.innerHeight)
+            })
+
 
             const curWindow = newWindow.current
             return () => curWindow.close()
@@ -37,6 +42,7 @@ const NewWindow = props => {
 
 NewWindow.propTypes = {
     onClose: PropTypes.func,
+    onResize: PropTypes.func,
     top: PropTypes.number,
     left: PropTypes.number,
     right: PropTypes.number,
@@ -54,7 +60,8 @@ NewWindow.defaultProps = {
     width: 1920,
     height: 1080,
     title: 'New window',
-    onClose: function () {}
+    onClose: function () {},
+    onResize: function () {}
 }
 
 export default NewWindow
