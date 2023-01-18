@@ -15,16 +15,12 @@ const Template = (args) => {
 	const [size, setSize] 		= React.useState(DEFAULT_SIZE)
 	const [isOpen, setIsOpen] 	= React.useState(false)
 	const [scale, setScale] 	= React.useState(100)
-	const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
 
 	useEffect(() => {
 		let scaleW = 100 / DEFAULT_SIZE.width * Math.max(size.width, 0)
 		let scaleH = 100 / DEFAULT_SIZE.height * Math.max(size.height, 0)
 	
-		
 		setScale(Math.min(scaleW, scaleH))
-
-		console.log(size, scale)
 	}, [size])
 	
     return (<>
